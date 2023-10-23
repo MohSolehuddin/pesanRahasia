@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pesan rahasia</title>
+
+    <!-- Instalasi AOS -->
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+    <!-- Akhir Instalasi AOS -->
+
+    <!-- Instalasi Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro" rel="stylesheet">
+    <!-- Akhir Instalasi Google fonts -->
+
+    <!-- Instalasi css pribadi -->
+    <link rel="stylesheet" href="src/css/main.css" type="text/css" media="all" />
+    <!-- Akhir Instalasi css pribadi -->
+  </head>
+  <body>
+    <!-- Instalasi js  pribadi-->
+    <script src="src/js/main.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Akhir Instalasi js  ppribadi-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Runer js -->
+    <script src="aos-master/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      delay: 100,
+      duration: 700,
+      once: false
+      });
+    </script>
+    <!-- Akhir Runer js -->
+    
+    <!-- Body Website -->
+    <main class="main">
+      <h1 class="title">pesan rahasia</h1>
+      <section class="crypt">
+        <label for="enkOrDek" id="eod"></label>
+        <button type="submit" onclick="crypt('enk')" id="bEnk">Samarkan</button>
+        <button type="submit" onclick="crypt('dek')" id="bDek">Lihat</button>
+        <br />
+        <section id="proses"></section>
+        <br />
+        <textarea name="hasil" id="hasil" rows="8" cols="40"></textarea>
+        <br />
+        <br />
+         <button type="submit" onclick="CopyToClipboard('hasil')">salin</button>
+      </section>
+      
+    </main>
+ 
+    <!-- Akhir Body Website -->
+    <script type="text/javascript" charset="utf-8">
+      crypt();
+    </script>
+  </body>
+</html>
